@@ -32,13 +32,11 @@ data2days$DateTime <- as.POSIXct(datetime)
 ###############################################################################
 ## Part 3: plot the the global active power vs. the date
 ###############################################################################
+png(file="plot2.png",width=480, height=480) # Call the png device
 plot(data2days$DateTime, data2days$Global_active_power, type="l", 
      ylab="Global Active Power (kilowatts)", xlab="")
 box(lty = 'solid')
 
-###############################################################################
-## Part 4: copy the plot to a PNG file
-###############################################################################
-dev.copy(png, file = "plot2.png")
+####
 dev.off()  # close the PNG device
 

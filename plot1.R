@@ -22,10 +22,8 @@ names(data2days) <-  names(fstRow)  # Assign the names to tmp
 ###############################################################################
 ## Part 2: plot the histogram of the global active power
 ###############################################################################
+png(file="plot1.png",width=480, height=480)   # Call the png device
 hist(data2days$Global_active_power, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency" )
 
-###############################################################################
-## Part 3: copy the plot to a PNG file
-###############################################################################
-dev.copy(png, file = "plot1.png")
+####
 dev.off()  # close the PNG device

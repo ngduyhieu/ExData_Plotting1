@@ -35,6 +35,7 @@ data2days$DateTime <- as.POSIXct(datetime)
 ###############################################################################
 
 ##### Create the main figure with 4 sub-figures
+png(file="plot4.png",width=480, height=480)  # Call the png device
 par(mfrow = c(2,2))
 
 ##### Plot the first sub-figure
@@ -68,9 +69,6 @@ plot(data2days$DateTime, data2days$Global_reactive_power, type="l",
 box(lty = 'solid')
 
 
-###############################################################################
-## Part 4: copy the plot to a PNG file
-###############################################################################
-dev.copy(png, file = "plot4.png")
+####
 dev.off()  # close the PNG device
 

@@ -32,6 +32,7 @@ data2days$DateTime <- as.POSIXct(datetime)
 ###############################################################################
 ## Part 3: plot the sub-metering
 ###############################################################################
+png(file="plot3.png",width=480, height=480) # Call the png device
 
 plot(data2days$DateTime, data2days$Sub_metering_1, type="n", 
               ylab="Energy sub metering", xlab="", ylim=c(0.0,40.0)) 
@@ -48,9 +49,6 @@ par(new = T)
 legend("topright", pch = "_", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3" ))
 par(new = F)
 
-###############################################################################
-## Part 4: copy the plot to a PNG file
-###############################################################################
-dev.copy(png, file = "plot3.png")
+####
 dev.off()  # close the PNG device
 
